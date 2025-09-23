@@ -59,7 +59,7 @@ export default function Login() {
     <div className="form-container">
       <div className="login-container">
         <form className="login-form" onSubmit={HandleSubmit}>
-          <h2>🔑 Login</h2>
+          <h2>Login</h2>
 
           <div className="form-group">
             <label>ID</label>
