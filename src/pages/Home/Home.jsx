@@ -1,16 +1,20 @@
 import "./Home.css";
 
 // comppoents
-
-
-import HeroSection from "../../components/HeroSection/HeroSection"
-
+import Products from "../../components/ProductCard/Product";
+import HeroSection from "../../components/HeroSection/HeroSection";
 
 export default function Home() {
   return (
     <>
-<HeroSection></HeroSection>
+    
+      <HeroSection />
 
+      {/* Cards container */}
+
+      <Products/>
+      
+     
     </>
   );
 }
