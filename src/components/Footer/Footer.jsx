@@ -9,6 +9,14 @@ export default function Footer (){
         
           <footer className="footer">
         <div className="footer-container">
+
+        <div className="footer-img">
+          <img src="//gharyal.com/cdn/shop/files/Gharyal-logo_x75@2x.png?v=1699701859" alt="Gharyal by Collectibles ">
+          </img>
+          </div>
+
+
+
           <div className="footer-about">
             <h3>About Digital Clock</h3>
             <p>
@@ -41,7 +49,7 @@ export default function Footer (){
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 MyCollege. All Rights Reserved.</p>
+          <p>© 2025 GHARYAL.com  All Rights Reserved.</p>
         </div>
       </footer>
         </>

@@ -26,7 +26,10 @@ export default function Login() {
         SetLoading(false);
       }
     }
+    
     fetchUsers();
+
+    
   }, []);
 
   // ✅ Handle form submit
