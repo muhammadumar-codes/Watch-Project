@@ -6,6 +6,14 @@ import axios from "axios";
 export default function Login() {
   const navigate = useNavigate();
 
+// handle Reload
+const handleReload =()=>{
+  window.location.reload();
+
+}
+
+
+
   const [Users, SetUsers] = useState([]);
   const [isLoading, SetLoading] = useState(true);
   const [isError, SetError] = useState(false);
@@ -56,7 +64,12 @@ export default function Login() {
 
   // ✅ Loader and Error UI
   if (isLoading) return <h1>⏳ Loading...</h1>;
-  if (isError) return <h1>⚠️ Something went wrong!</h1>;
+  if (isError) return <>
+ <div className="error-container">
+   <h1>⚠️ Something went wrong!Check Internet Connection</h1>
+  <button onClick={handleReload}>Reload</button>
+ </div>
+  </>
 
   return (
     <div className="form-container">
