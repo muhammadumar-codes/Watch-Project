@@ -147,7 +147,7 @@ const watches = [
 
   return (
     <>
-      <HeroSection />
+      <HeroSection page={"Premium"}  className={"container-fluid-Home-page"} />
       <Dropdown setSelected={setSelected} />
       <Product watches={filterWatches} />
     </>

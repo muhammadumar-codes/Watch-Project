@@ -1,0 +1,62 @@
+.container-about-page {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-subheading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #0072ff;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.idea-para,
+.about-right {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  
+  transition: transform 0.3s ease;
+}
+
+.idea-para:hover,
+.about-right:hover {
+  transform: translateY(-5px);
+}
+
+.watch-finder {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8fbff;
+  border-left: 4px solid #0072ff;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  .container-about-page {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

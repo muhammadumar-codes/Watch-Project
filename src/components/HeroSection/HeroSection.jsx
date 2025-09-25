@@ -1,11 +1,12 @@
+
 import "./HeroSection.css"
 
-export default function HeroSection(){
+export default function HeroSection({ page, className,}){
 return (
   <>
-    <div className="container-fluid">
-  <div className="banner-content">
-    <h1>⌚ Premium Watches</h1>
+    <div className={className}>
+  <div  className="banner-content">
+    <h1>⌚ {page} Watches</h1>
     <p>Elegance on your wrist – Discover our collection</p>
    
   </div>

@@ -1,4 +1,4 @@
-.container-fluid {
+.container-fluid-Home-page {
   background-image: url("https://www.aviandco.com/media//banners/rubber-strap_2025_web_banner_1_cta.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,8 +12,22 @@
   overflow: hidden;
 }
 
-/* Overlay for dark effect */
-.container-fluid::before {
+.about-fluid {
+  background-image: url("../src/assets/images/About-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  overflow: hidden;
+}
+
+
+.about-fluid::before {
   content: "";
   position: absolute;
   top: 0;
@@ -21,6 +35,20 @@
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.5); /* dark shade */
+  z-index: 1;
+}
+
+
+
+/* Overlay for dark effect */
+.container-fluid-Home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark shade */
   z-index: 1;
 }
 
