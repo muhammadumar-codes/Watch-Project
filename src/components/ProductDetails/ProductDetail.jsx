@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 
+//css
+import  "./ProductDetail.css"
 //data
 import { watches } from "../../components/Data/Data";
 
@@ -10,17 +12,20 @@ export default function ProductDetails() {
   // convert id (string → number) and find product
   const watch = watches.find((p) => p.id === +id);
 
+  //css
+  
+
   // showing card on Detail page
   return (
     <>
       <div className="card-container">
         {watch ? (
           <div
-            className="card shadow-sm mb-4 bg-body rounded"
-            style={{ width: "22rem" }}
+            className="cardDetail shadow-sm mb-4 bg-body "
+            style={{ width: "60rem" }}
           >
-            <img src={watch.image} className="watch-img" alt={watch.name} />
-            <div className="card-body text-center">
+           <div> <img src={watch.image} className="watch-img" alt={watch.name} /></div>
+            <div className="card-body-detail-page text-center">
               <h5 className="card-title">{watch.name}</h5>
               <p className="card-text">{watch.description}</p>
               <h6 className="price-tag">Rs. {watch.price}</h6>
