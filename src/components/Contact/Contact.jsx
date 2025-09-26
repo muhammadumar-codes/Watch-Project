@@ -81,10 +81,17 @@ export default function Contact() {
         </form>
 
         {/* ✅ Modal / Success Message */}
-        {modal && (
+        {
+        
+        modal && (
           <div className="success-message">
             <h2>✅ Thank you, {form.username || "User"}!</h2>
             <p>Your message has been sent successfully. We’ll get back to you soon.</p>
+            {
+              setTimeout(() => {
+                setModal(false)
+              },3000)
+            }
             <button onClick={() => setModal(false)} className="btn-gradient">
               Close
             </button>

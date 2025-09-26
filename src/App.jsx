@@ -26,10 +26,10 @@ export default function App() {
       <Route element={<Private />}>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="/productDetail/:id" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clock" element={<DigitalClock />} />
-          <Route path="/productDetail/:id" element={<ProductDetail />} />
         </Route>
       </Route>
 
