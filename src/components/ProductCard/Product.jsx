@@ -14,7 +14,7 @@ export default function Product({ watches }) {
             <div className="card-body text-center">
               <h5 className="card-title">{item.name}</h5>
               <p className="card-text">{item.description}</p>
-              <h6 className="price-tag">{item.price}</h6>
+              <h6 className="price-tag">Rs, {item.price}</h6>
               <a href="#" className="btn-gradient">🛒 Add To Cart</a>
             </div>
           </div>

@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       {/* Hero Banner */}
-      <Hero className={"about-fluid"} page={"About Us"} />
+      <Hero className={"about-fluid"} page={"About "} />
 
       <div className="container-about-page">
         {/* Left Column */}

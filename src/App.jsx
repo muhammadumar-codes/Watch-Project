@@ -9,7 +9,8 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import LoginPage from "./pages/Login/Login";
-import DigitalClock from "./components/DigtalWatch/DigtalWatch"
+import DigitalClock from "./components/DigtalWatch/DigtalWatch";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 // Layout
 import Layout from "./Layouts/Layout";
@@ -25,11 +26,11 @@ export default function App() {
         {/* 🔒 Protected Routes (User must be logged in) */}
         <Route element={<Private />}>
           <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
+            <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/Clock" element={<DigitalClock />} />
-
+            <Route path="/clock" element={<DigitalClock />} />
+            <Route path="/productDetail/:id" element={<ProductDetail />} />
           </Route>
         </Route>
 

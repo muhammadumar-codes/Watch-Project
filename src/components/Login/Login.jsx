@@ -67,7 +67,7 @@ const handleReload =()=>{
   if (isError) return <>
  <div className="error-container">
    <h1>⚠️ Something went wrong!Check Internet Connection</h1>
-  <button onClick={handleReload}>Reload</button>
+  <button onClick={handleReload}>Refresh</button>
  </div>
   </>
 
