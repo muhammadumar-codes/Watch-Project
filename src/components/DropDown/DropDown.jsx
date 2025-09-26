@@ -2,7 +2,8 @@ import "./Dropdown.css";
 
 export default function Dropdown({ setSelected }) {
   return (
-    <div className="dropdown-category">
+   <div className="drop-down">
+     <div className="dropdown-category">
       <h2 className="dropdown-title">Choose Category 🕰️</h2>
 
       <select className="select" onChange={(e) => setSelected(e.target.value)}>
@@ -12,6 +13,7 @@ export default function Dropdown({ setSelected }) {
         <option value="unisex">Unisex Watches</option>
       </select>
     </div>
+   </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import "./ProductDetail.css"
+
   
 
 // components

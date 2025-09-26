@@ -1,3 +1,8 @@
+.card-container >a{
+  text-decoration: none;
+
+}
+
 /* Card Container */
 .card {
   border: none;
@@ -8,7 +13,8 @@
   background: #fff;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  
+}.
 
 .card:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);

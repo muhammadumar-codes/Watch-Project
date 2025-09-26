@@ -10,7 +10,8 @@ import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import LoginPage from "./pages/Login/Login";
 import DigitalClock from "./components/DigtalWatch/DigtalWatch";
-import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import ProductDetail from "./pages/Home/ProductDetail"
+
 
 // Layout
 import Layout from "./Layouts/Layout";
@@ -27,6 +28,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/productDetail/:id" element={<ProductDetail />} />
+
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clock" element={<DigitalClock />} />

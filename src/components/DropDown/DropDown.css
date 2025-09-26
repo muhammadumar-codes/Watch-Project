@@ -1,12 +1,14 @@
 /* Dropdown Container */
+.drop-down {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px;
+}
 .dropdown-category {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 12px;
-  max-width: 320px;
-  margin: 20px auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Title */
