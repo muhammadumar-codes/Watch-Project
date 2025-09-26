@@ -14,11 +14,9 @@ export default function Home() {
 
   const [selected, setSelected] = useState("");
 
-const filterWatches =selected===""
-?watches
+const filterWatches=selected===""
+?watches 
 :watches.filter((item)=>item.category.toLowerCase()===selected.toLowerCase())
-
-
 
   return (
     <>

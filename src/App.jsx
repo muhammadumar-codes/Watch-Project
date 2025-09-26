@@ -21,27 +21,25 @@ import Redirect from "./Roots/Redirected";
 
 export default function App() {
   return (
-    <>
-      <Routes>
-        {/* 🔒 Protected Routes (User must be logged in) */}
-        <Route element={<Private />}>
-          <Route element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/clock" element={<DigitalClock />} />
-            <Route path="/productDetail/:id" element={<ProductDetail />} />
-          </Route>
+    <Routes>
+      {/* 🔒 Protected Routes (User must be logged in) */}
+      <Route element={<Private />}>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/clock" element={<DigitalClock />} />
+          <Route path="/productDetail/:id" element={<ProductDetail />} />
         </Route>
+      </Route>
 
-        {/* 🚪 Redirect Routes (If already logged in → redirect to home) */}
-        <Route element={<Redirect />}>
-          <Route path="/login" element={<LoginPage />} />
-        </Route>
+      {/* 🚪 Redirect Routes (If already logged in → redirect to home) */}
+      <Route element={<Redirect />}>
+        <Route path="/login" element={<LoginPage />} />
+      </Route>
 
-        {/* ❌ Catch All Route */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </>
+      {/* ❌ Catch All Route */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
