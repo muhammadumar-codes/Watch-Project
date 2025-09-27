@@ -11,6 +11,8 @@ import NotFound from "./pages/NotFound/NotFound";
 import LoginPage from "./pages/Login/Login";
 import DigitalClock from "./components/DigtalWatch/DigtalWatch";
 import ProductDetail from "./pages/Home/ProductDetail"
+import DataContextProvider from "./components/DataContext/Datacontext"
+
 
 
 // Layout
@@ -19,12 +21,13 @@ import Layout from "./Layouts/Layout";
 // Auth Routes
 import Private from "./Roots/Private";
 import Redirect from "./Roots/Redirected";
-import { watchPrvider } from "./components/WatchContext/watchContext";
+
+
 
 export default function App() {
   return (
     <>
-    <watchPrvider>
+    <DataContextProvider>
 
     <Routes>
       {/* 🔒 Protected Routes (User must be logged in) */}
@@ -47,7 +50,7 @@ export default function App() {
       {/* ❌ Catch All Route */}
       <Route path="*" element={<NotFound />} />
     </Routes>
-    </watchPrvider>
+    </DataContextProvider>
     
     </>
   );

@@ -1,11 +1,15 @@
 import { useParams } from "react-router-dom";
 
+// for-using context api 
+import { useContext } from "react";
+
 //css
 import "./ProductDetail.css";
 //data
-import { watches } from "../../components/Data/Data";
+import {DataContext} from "../DataContext/Datacontext"
 
 export default function ProductDetails() {
+const {watches}=useContext(DataContext)
   // Taking the parameter as id
   const { id } = useParams();
 
