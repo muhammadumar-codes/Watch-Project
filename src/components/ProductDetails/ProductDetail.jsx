@@ -1,19 +1,18 @@
 import { useParams } from "react-router-dom";
 
 //css
-import  "./ProductDetail.css"
+import "./ProductDetail.css";
 //data
 import { watches } from "../../components/Data/Data";
 
 export default function ProductDetails() {
   // Taking the parameter as id
-  const {id}=useParams();
+  const { id } = useParams();
 
   // convert id (string → number) and find product
   const watch = watches.find((p) => p.id === +id);
 
   //css
-  
 
   // showing card on Detail page
   return (
@@ -24,11 +23,20 @@ export default function ProductDetails() {
             className="cardDetail shadow-sm mb-4 bg-body "
             style={{ width: "60rem" }}
           >
-           <div> <img src={watch.image} className="watch-img" alt={watch.name} /></div>
+            <div>
+              {" "}
+              <img
+                src={watch.image}
+                className="watch-img-detail"
+                alt={watch.name}
+              />
+            </div>
             <div className="card-body-detail-page text-center">
-              <h5 className="card-title">{watch.name}</h5>
-              <p className="card-text">{watch.description}</p>
-              <h6 className="price-tag">Rs. {watch.price}</h6>
+              <h5 className="brand-name-detail">{watch.name}</h5>
+              <h6 className="card-title-detail">{watch.brand}</h6>
+              <p className="card-textdetail">{watch.description}</p>
+              <h6 className="price-tag-detail">Rs. {watch.price}</h6>
+
               <a href="#" className="btn-gradient">
                 🛒 Add To Cart
               </a>

@@ -1,16 +1,95 @@
-.cardDetail{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    border-radius: 5px;
+.cardDetail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 1100px;
+  padding: 25px;
+  gap: 30px;
+  background: #fff;
+  border-radius: 12px;
+box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
-.card-body-detail-page{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
+.img-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
+.watch-img-detail {
+  max-width: 400px;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-body-detail-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 20px;
+}
+
+.card-title-detail {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.brand-name-detail {
+  font-size: 1.2rem;
+  color: #0072ff;
+  font-weight: 600;
+}
+
+.price-tag-detail {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5733;
+}
+
+.release-year-detail {
+  font-size: 1rem;
+  color: #555;
+}
+
+.stock-detail {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.in-stock {
+  color: green;
+}
+.out-stock {
+  color: red;
+}
+
+.features-list {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+.features-list li {
+  margin-bottom: 6px;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+    transition: all 0.5s ease-in-out;
+}

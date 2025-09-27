@@ -19,9 +19,13 @@ import Layout from "./Layouts/Layout";
 // Auth Routes
 import Private from "./Roots/Private";
 import Redirect from "./Roots/Redirected";
+import { watchPrvider } from "./components/WatchContext/watchContext";
 
 export default function App() {
   return (
+    <>
+    <watchPrvider>
+
     <Routes>
       {/* 🔒 Protected Routes (User must be logged in) */}
       <Route element={<Private />}>
@@ -43,5 +47,8 @@ export default function App() {
       {/* ❌ Catch All Route */}
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </watchPrvider>
+    
+    </>
   );
 }
