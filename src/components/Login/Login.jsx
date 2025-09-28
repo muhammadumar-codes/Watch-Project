@@ -22,9 +22,9 @@ const handleReload =()=>{
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/users"
-        );
+     const response = await axios.get(import.meta.env.VITE_USERS_ENDPOINT);
+
+
         SetUsers(response.data);
         console.log(response.data)
         SetLoading(false);
