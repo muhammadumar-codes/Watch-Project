@@ -23,7 +23,7 @@ const handleReload =()=>{
     async function fetchUsers() {
       try {
      const response = await axios.get(import.meta.env.VITE_USERS_ENDPOINT);
-
+        
 
         SetUsers(response.data);
         console.log(response.data)
