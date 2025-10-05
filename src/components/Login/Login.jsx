@@ -6,13 +6,10 @@ import axios from "axios";
 export default function Login() {
   const navigate = useNavigate();
 
-// handle Reload
-const handleReload =()=>{
-  window.location.reload();
-
-}
-
-
+  // handle Reload
+  const handleReload = () => {
+    window.location.reload();
+  };
 
   const [Users, SetUsers] = useState([]);
   const [isLoading, SetLoading] = useState(true);
@@ -22,11 +19,12 @@ const handleReload =()=>{
   useEffect(() => {
     async function fetchUsers() {
       try {
-     const response = await axios.get(import.meta.env.VITE_USERS_ENDPOINT);
-    console.log(import.meta.env.VITE_API_NAME)
+        const userApiUrl = import.meta.env.VITE_USERS_API_URL;
+        const response = await axios.get(`${userApiUrl}/users`);
+        console.log(import.meta.env.VITE_API_NAME);
 
         SetUsers(response.data);
-        console.log(response.data)
+        console.log(response.data);
         SetLoading(false);
       } catch (error) {
         console.log(error);
@@ -34,10 +32,8 @@ const handleReload =()=>{
         SetLoading(false);
       }
     }
-    
-    fetchUsers();
 
-    
+    fetchUsers();
   }, []);
 
   // ✅ Handle form submit
@@ -64,12 +60,15 @@ const handleReload =()=>{
 
   // ✅ Loader and Error UI
   if (isLoading) return <h1>⏳ Loading...</h1>;
-  if (isError) return <>
- <div className="error-container">
-   <h1>⚠️ Something went wrong!Check Internet Connection</h1>
-  <button onClick={handleReload}>Refresh</button>
- </div>
-  </>
+  if (isError)
+    return (
+      <>
+        <div className="error-container">
+          <h1>⚠️ Something went wrong!Check Internet Connection</h1>
+          <button onClick={handleReload}>Refresh</button>
+        </div>
+      </>
+    );
 
   return (
     <div className="form-container">
