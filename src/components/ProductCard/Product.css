@@ -27,6 +27,7 @@
   object-fit: cover;
   border-bottom: 2px solid #f1f1f1;
   transition: transform 0.4s ease;
+  cursor: pointer;
 }
 
 .card:hover .watch-img {
