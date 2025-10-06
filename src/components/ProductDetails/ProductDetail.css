@@ -93,3 +93,14 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
   background: linear-gradient(90deg, #0072ff, #00c6ff);
     transition: all 0.5s ease-in-out;
 }
+
+.rating-detail {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 8px;
+}
+.rating-detail span:last-child {
+  color: #333;
+  font-size: 1rem;
+  margin-left: 5px;
+}
