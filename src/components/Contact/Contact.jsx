@@ -3,7 +3,7 @@ import "./Contact.css";
 
 export default function Contact() {
   const [form, setForm] = useState({ username: "", email: "", message: "" });
-  const [modal, setModal] = useState(false);
+const [modal, setModal]=useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,10 +28,10 @@ export default function Contact() {
         {/* Info Section */}
         <div className="contact-info">
           <p>
-            Call us: <strong>(385) 219-4767</strong>
+            Call us: <strong>03010568885</strong>
           </p>
           <p>Office Hours: Mon - Fri | 10am - 5pm MST</p>
-          <p>Email us: support@timezone.com</p>
+          <p>Email us: muhammadumar.codes@gmail.com</p>
         </div>
 
         {/* Form Section */}
