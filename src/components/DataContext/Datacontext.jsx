@@ -14,7 +14,7 @@ export default function DataContextProvider({ children }) {
       discount: 10,
       category: "Female",
       stock: 5,
-      rating: 4.9,
+      rating: 3.5,
       colors: ["Silver", "Black", "Gold"],
       isFeatured: true,
       image:

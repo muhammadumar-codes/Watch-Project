@@ -4,30 +4,30 @@ import "./ProductDetail.css";
 import { DataContext } from "../DataContext/Datacontext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-
 export default function ProductDetails() {
   const { watches } = useContext(DataContext);
   const { id } = useParams();
   const watch = watches.find((p) => p.id === +id);
 
   // ⭐ Function to render stars
-const renderStars = (rating) => {
-  const stars = [];
+  const renderStars = (rating) => {
+    const stars = [];
 
-  for (let i = 1; i <= 5; i++) {
-    if (i <= rating) {
-      // full star
-      stars.push(<FaStar key={i} color="#FFD700" size={25} />);
-    } else if (i - rating < 1) {
-      // half star
-      stars.push(<FaStarHalfAlt key={i} color="#FFD700" size={25} />);
-    } else {
-      // empty star
-      stars.push(<FaRegStar key={i} color="#FFD700" size={20} />);
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        // full star
+        stars.push(<FaStar key={i} color="#FFD700" size={20} />);
+      } else if (i - rating < 1) {
+        // half star
+
+        stars.push(<FaStarHalfAlt key={i} color="#FFD700" size={20} />);
+      } else {
+        // empty star
+        stars.push(<FaRegStar key={i} color="#FFD700" size={20} />);
+      }
     }
-  }
-  return stars;
-};
+    return stars;
+  };
 
   return (
     <>
@@ -55,8 +55,6 @@ const renderStars = (rating) => {
               </p>
 
               <h6 className="price-tag-detail">Rs. {watch.price}</h6>
-
-            
             </div>
           </div>
         ) : (
