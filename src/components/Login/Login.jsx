@@ -6,76 +6,69 @@ import axios from "axios";
 export default function Login() {
   const navigate = useNavigate();
 
-  // handle Reload
-  const handleReload = () => {
-    window.location.reload();
-  };
+  const [users, setUsers] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+  const [isError, setError] = useState(false);
 
-  const [Users, SetUsers] = useState([]);
-  const [isLoading, SetLoading] = useState(true);
-  const [isError, SetError] = useState(false);
+  
+  const handleReload = () => window.location.reload();
 
-  // ✅ Fetch all registered users when component loads
+
   useEffect(() => {
     async function fetchUsers() {
       try {
         const userApiUrl = import.meta.env.VITE_USERS_API_URL;
         const response = await axios.get(`${userApiUrl}/users`);
-        console.log(import.meta.env.VITE_API_NAME);
-
-        SetUsers(response.data);
-        console.log(response.data);
-        SetLoading(false);
+        setUsers(response.data);
+        setLoading(false);
       } catch (error) {
-        console.log(error);
-        SetError(true);
-        SetLoading(false);
+        console.error(error);
+        setError(true);
+        setLoading(false);
       }
     }
-
     fetchUsers();
   }, []);
 
-  // ✅ Handle form submit
-  const HandleSubmit = (e) => {
+  
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const ID = e.target.ID.value.trim();
+    const username = e.target.username.value.trim();
 
-    const ID = e.target.ID.value;
-    const username = e.target.username.value;
-
-    const user = Users.find(
-      (item) => item.id === Number(ID) && item.name === username
+    const user = users.find(
+      (item) =>
+        item.id === Number(ID) && item.name.toLowerCase() === username.toLowerCase()
     );
 
     if (user) {
       localStorage.setItem("currentUser", JSON.stringify(user));
-      console.log("✅ Logged In:", user);
       navigate("/");
     } else {
-      alert("❌ You must be registered first!");
+      alert("❌ Invalid credentials! Please check your ID or Username.");
     }
 
     e.target.reset();
   };
 
-  // ✅ Loader and Error UI
-  if (isLoading) return <h1>⏳ Loading...</h1>;
+  // 🌀 Loader & Error UI
+  if (isLoading) return <h1 className="loading">⏳ Loading...</h1>;
+
   if (isError)
     return (
-      <>
-        <div className="error-container">
-          <h1>⚠️ Something went wrong!Check Internet Connection</h1>
-          <button onClick={handleReload}>Refresh</button>
-        </div>
-      </>
+      <div className="error-container">
+        <h1>⚠ Something went wrong! Please check your internet.</h1>
+        <button onClick={handleReload}>🔄 Refresh</button>
+      </div>
     );
 
   return (
     <div className="form-container">
       <div className="login-container">
-        <form className="login-form" onSubmit={HandleSubmit}>
-          <h2>Login</h2>
+        <h2>Welcome Back 👋</h2>
+        <p className="subtitle">Login to continue to your dashboard</p>
 
+        <form className="login-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label>ID</label>
             <input type="number" placeholder="Enter your ID" required id="ID" />
@@ -95,6 +88,10 @@ export default function Login() {
             Login
           </button>
         </form>
+
+        <p className="register-link">
+          Don’t have an account? <a href="/register">Register</a>
+        </p>
       </div>
     </div>
   );

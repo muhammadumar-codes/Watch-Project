@@ -1,87 +1,114 @@
+/* 🌐 Global Layout */
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(135deg, #2a2a72, #009ffd);
+  font-family: "Poppins", sans-serif;
 }
-/* Container */
+
+/* 🌟 Login Card */
 .login-container {
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  width: 600px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 40px 50px;
+  border-radius: 16px;
+  width: 400px;
   text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Heading */
-.login-form h2 {
-  margin-bottom: 20px;
-  color: #0073e6;
+/* ✨ Heading */
+.login-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #fff;
 }
 
-/* Input fields */
+.subtitle {
+  font-size: 0.9rem;
+  color: #dcdcdc;
+  margin-bottom: 25px;
+}
+
+/* 🧾 Form */
 .form-group {
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
-  font-weight: bold;
-  font-size: 0.9rem;
-  margin-bottom: 5px;
   display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
 }
 
 .form-group input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: black;
   font-size: 1rem;
-  transition: 0.3s;
+  transition: 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #cfd2e2;
 }
 
 .form-group input:focus {
-  border-color: #0073e6;
-  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.02);
 }
 
-/* Button */
+/* 🚀 Button */
 .login-btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  margin-top: 10px;
   border: none;
-  background: #0073e6;
-  color: white;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: bold;
+  background: linear-gradient(90deg, #0073e6, #00b4d8);
+  color: white;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.4s ease;
 }
 
 .login-btn:hover {
-  background: #005bb5;
+  background: linear-gradient(90deg, #00b4d8, #0073e6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 115, 230, 0.4);
 }
 
-/* Register link */
+/* 🔗 Register link */
 .register-link {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 0.9rem;
+  color: #e5e5e5;
 }
 
 .register-link a {
-  color: #0073e6;
+  color: #00b4d8;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .register-link a:hover {
   text-decoration: underline;
 }
 
+/* ⚠ Error Page */
 .error-container {
   display: flex;
   flex-direction: column;
@@ -89,14 +116,43 @@
   align-items: center;
   height: 80vh;
   gap: 20px;
+  color: white;
+  text-align: center;
 }
+
 .error-container > button {
-  border: 2px solid blue;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #00b4d8;
+  background: transparent;
+  color: #00b4d8;
   font-weight: bold;
-  width: 120px;
-  border-radius: 20px;
-  padding: 8px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 25px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.error-container > button:hover {
+  background: #00b4d8;
+  color: white;
+}
+
+/* Loader */
+.loading {
+  color: white;
+  text-align: center;
+  margin-top: 40vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
