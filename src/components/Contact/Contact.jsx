@@ -14,15 +14,15 @@ export default function Contact() {
   // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
+    setForm({ username: "", email: "", message: "" }); // Reset after modal hides
     setModal(true);
   };
-
   // Auto-close modal after 3 seconds
+
   useEffect(() => {
     if (modal) {
       const timer = setTimeout(() => {
         setModal(false);
-        setForm({ username: "", email: "", message: "" }); // Reset after modal hides
       }, 3000);
       return () => clearTimeout(timer); // Cleanup
     }
