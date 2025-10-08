@@ -5,6 +5,20 @@ export default function Contact() {
   const [modal, setModal] = useState(false);
   const [form, setForm] = useState({ username: "", email: "", message: "" });
 
+  if (!form.username){
+    console.log("Please Required")
+ 
+    
+  }
+  else if (!form.email){
+    console.log("Please Fill Email")
+  }
+  else if (!form.message){
+    console.log("Please Fill Message")
+  }
+
+
+
   // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,7 +70,7 @@ export default function Contact() {
               name="username"
               id="username"
               placeholder="Enter your name"
-              required
+              
               value={form.username}
               onChange={handleChange}
             />
@@ -69,7 +83,7 @@ export default function Contact() {
               id="email"
               name="email"
               placeholder="Enter your email"
-              required
+              
               value={form.email}
               onChange={handleChange}
             />
@@ -82,7 +96,7 @@ export default function Contact() {
               name="message"
               placeholder="Write your message..."
               rows="5"
-              required
+              
               value={form.message}
               onChange={handleChange}
             ></textarea>
