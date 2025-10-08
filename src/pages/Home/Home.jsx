@@ -1,6 +1,8 @@
 import "./Home.css";
 import { useState } from "react";
 
+
+
 // for using  context api
 import { useContext } from "react";
 
@@ -8,12 +10,19 @@ import { useContext } from "react";
 import Product from "../../components/ProductCard/Product";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import Dropdown from "../../components/DropDown/DropDown";
+
+// DataContext from context api
 import { DataContext } from "../../components/DataContext/Datacontext";
+
+
+
+
 
 export default function Home() {
   const { watches } = useContext(DataContext);
-
   const [selected, setSelected] = useState("");
+
+
 
   const filterWatches =
     selected === ""

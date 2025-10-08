@@ -4,10 +4,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import { useState, useContext } from "react";
 import { DataContext } from "../../components/DataContext/Datacontext";
-import Product from "../ProductCard/Product";
+
 
 // ======= Header Component ==========
 export default function Header() {
+  
   const { watches } = useContext(DataContext);
   const [search, setSearch] = useState(""); // Search text
   const [filteredResults, setFilteredResults] = useState([]); // store filtered products
@@ -29,11 +30,9 @@ export default function Header() {
   // ======= Handle Submit ==========
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const filtered = watches.filter((item) =>
       item.name.toLowerCase().includes(search.toLowerCase())
     );
-
     setFilteredResults(filtered); // ✅ save results
     setSearch(""); // Clear the input
   };
@@ -75,11 +74,14 @@ export default function Header() {
           </form>
 
           <div className="cart-container">
+            <NavLink to={"/Cart"}>
             <img
               src="../src/assets/images/cart-icon.png"
               alt="Cart"
               className="cart-icon-image"
             />
+            </NavLink>
+
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </div>
 

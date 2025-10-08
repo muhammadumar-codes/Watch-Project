@@ -11,9 +11,10 @@ import NotFound from "./pages/NotFound/NotFound";
 import LoginPage from "./pages/Login/Login";
 import DigitalClock from "./components/DigtalWatch/DigtalWatch";
 import ProductDetail from "./pages/Home/ProductDetail"
+import Cart from  "./pages/CartPage/CartPage"
+
+// Watch DataProvider
 import DataContextProvider from "./components/DataContext/Datacontext"
-
-
 
 // Layout
 import Layout from "./Layouts/Layout";
@@ -30,24 +31,24 @@ export default function App() {
     <DataContextProvider>
 
     <Routes>
-      {/* 🔒 Protected Routes (User must be logged in) */}
+      {/*  Protected Routes (User must be logged in) */}
       <Route element={<Private />}>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/productDetail/:id" element={<ProductDetail />} />
-
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clock" element={<DigitalClock />} />
+          <Route path="/Cart" element={<Cart />} />
         </Route>
       </Route>
 
-      {/* 🚪 Redirect Routes (If already logged in → redirect to home) */}
+      {/*  Redirect Routes (If already logged in → redirect to home) */}
       <Route element={<Redirect />}>
         <Route path="/login" element={<LoginPage />} />
       </Route>
 
-      {/* ❌ Catch All Route */}
+      {/*  Catch All Route */}
       <Route path="*" element={<NotFound />} />
     </Routes>
     </DataContextProvider>

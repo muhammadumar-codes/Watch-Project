@@ -1,17 +1,27 @@
-.container-fluid{
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+/* 🌟 Container Setup */
+.container-fluid {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+/* 📦 Contact Section */
 .contact-container {
-  width: 75%;
+  width: 80%;
   padding: 40px;
   background: #ffffff;
   border-radius: 16px;
   text-align: center;
 }
+
 
 .contact-title {
   font-size: 2.2rem;
@@ -28,6 +38,7 @@
   margin-bottom: 25px;
 }
 
+/* 📄 Info Section */
 .contact-info {
   margin-bottom: 30px;
   font-size: 1rem;
@@ -38,7 +49,7 @@
   margin: 8px 0;
 }
 
-/* Form Styling */
+/* 📝 Form Styling */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -47,40 +58,38 @@
 }
 
 .form-group label {
-  font-weight: 600;
-  margin-bottom: 8px;
   display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
   color: #333;
 }
 
-.form-group input,
-.form-group textarea {
+/* 🧾 Input & Textarea */
+/* .form-group > input,textarea{
   width: 100%;
   padding: 12px;
   border-radius: 10px;
-  border: 1px solid #ddd;
   font-size: 1rem;
+  color: black;
   outline: none;
   transition: border 0.3s ease;
-  color: black;
+} */
+
+#username:focus {
+  border-color: #0072ff;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border: 1px solid #0072ff;
-}
-
-/* Gradient Button */
+/* 🎨 Gradient Button */
 .btn-gradient {
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
-  color: white;
-  font-weight: 600;
-  border-radius: 30px;
+  align-self: center;
   padding: 12px 25px;
   border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
   cursor: pointer;
   transition: all 0.3s ease;
-  align-self: center;
 }
 
 .btn-gradient:hover {
@@ -88,31 +97,30 @@
   box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
   transform: translateY(-3px);
 }
-/* Success Modal / Message */
+
+/* ✅ Success Modal */
 .success-message {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
   width: 400px;
   max-width: 90%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
   z-index: 1000;
   animation: fadeInScale 0.3s ease-in-out;
-  color: white;
 }
 
-/* Modal Title */
+/* 🏷️ Modal Text */
 .success-message h2 {
   color: #0072ff;
   margin-bottom: 10px;
 }
 
-/* Modal Paragraph */
 .success-message p {
   font-size: 0.95rem;
   color: #444;
@@ -120,7 +128,7 @@
   line-height: 1.4;
 }
 
-/* Backdrop (overlay background) */
+/* 🔳 Overlay */
 .success-message::before {
   content: "";
   position: fixed;
@@ -130,16 +138,15 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   z-index: -1;
-  color: white;
 }
 
-/* Button styling reuse */
+/* 🔘 Modal Button */
 .success-message .btn-gradient {
   padding: 10px 20px;
   border-radius: 25px;
 }
 
-/* Animation */
+/* ✨ Animation */
 @keyframes fadeInScale {
   from {
     transform: translate(-50%, -50%) scale(0.8);

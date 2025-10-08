@@ -2,7 +2,6 @@ import "./Product.css";
 
 import { useNavigate } from "react-router-dom";
 
-
 export default function Product({ watches }) {
   const navigate = useNavigate();
 

@@ -1,7 +1,9 @@
 import { createContext } from "react";
-
-
 export const DataContext = createContext();
+
+
+// ===this  Provider  watch  Data provider ====
+
 export default function DataContextProvider({ children }) {
   const watches = [
     {
@@ -65,7 +67,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.5,
       colors: ["Blue", "Black", "Green"],
       isFeatured: false,
-      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+      image: "../../src/assets/images/watch (3).jpg",
     },
     {
       id: 5,
@@ -125,7 +127,7 @@ export default function DataContextProvider({ children }) {
       colors: ["Black", "Brown"],
       isFeatured: false,
       image:
-        "//currenwatches.com.pk/cdn/shop/files/cds_035c6b1b-6a83-464c-a6b3-01e28baeb4bd.jpg?v=1747630736&amp;width=533",
+        "../../src/assets/images/watch (8).jpg",
     },
     {
       id: 9,
@@ -139,7 +141,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.8,
       colors: ["Rose Gold", "Silver"],
       isFeatured: true,
-      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9",
+      image: "../../src/assets/images/watch (1).jpg",
     },
     {
       id: 10,
@@ -153,8 +155,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.5,
       colors: ["Silver", "Black", "Blue"],
       isFeatured: false,
-      image:
-        "//currenwatches.com.pk/cdn/shop/files/1b4f8b28-4002-4d0a-be2b-218f3fa6e330.jpg?v=1747820666&amp;width=165 165w,//currenwatches.com.pk/cdn/shop/files/1b4f8b28-4002-4d0a-be2b-218f3fa6e330.jpg?v=1747820666&amp;width=360 360w,//currenwatches.com.pk/cdn/shop/files/1b4f8b28-4002-4d0a-be2b-218f3fa6e330.jpg?v=1747820666&amp;width=493 493w",
+      image:"../../src/assets/images/watch (4).jpg",
     },
     {
       id: 11,
@@ -197,7 +198,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.7,
       colors: ["Black", "Brown"],
       isFeatured: false,
-      image: "../src/assets/images/watch (6).jpg",
+      image: "../src/assets/images/watch (5).jpg",
     },
     {
       id: 14,
@@ -212,7 +213,7 @@ export default function DataContextProvider({ children }) {
       colors: ["Blue", "Brown", "Rose Gold"],
       isFeatured: false,
       image:
-        "//currenwatches.com.pk/cdn/shop/products/S38f7a029e54b47c1a5d68f068c54bd97Y.jpg?v=1747630736&amp;width=165 165w,//currenwatches.com.pk/cdn/shop/products/S38f7a029e54b47c1a5d68f068c54bd97Y.jpg?v=1747630736&amp;width=360 360w,//currenwatches.com.pk/cdn/shop/products/S38f7a029e54b47c1a5d68f068c54bd97Y.jpg?v=1747630736&amp;width=493 493w",
+        "../../src/assets/images/watch (3).jpg",
     },
     {
       id: 15,
@@ -226,9 +227,14 @@ export default function DataContextProvider({ children }) {
       rating: 4.6,
       colors: ["Black", "Green", "Silver"],
       isFeatured: true,
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      image: "../../src/assets/images/watch (7).jpg",
     },
   ];
+
+  // === this  is Provider for Cart system  ====
+  
+  
+
 
   return (
     <>

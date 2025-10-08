@@ -1,20 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Contact.css";
 
 export default function Contact() {
+  const [modal, setModal] = useState(false);
   const [form, setForm] = useState({ username: "", email: "", message: "" });
-const [modal, setModal]=useState(false)
 
+  // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
+  // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    setModal(true); // Show modal
-    setForm({ username: "", email: "", message: "" }); // Reset form
+    setModal(true);
   };
+
+  // Auto-close modal after 3 seconds
+  useEffect(() => {
+    if (modal) {
+      const timer = setTimeout(() => {
+        setModal(false);
+        setForm({ username: "", email: "", message: "" }); // Reset after modal hides
+      }, 3000);
+      return () => clearTimeout(timer); // Cleanup
+    }
+  }, [modal]);
 
   return (
     <div className="container-fluid">
@@ -22,15 +34,16 @@ const [modal, setModal]=useState(false)
         {/* Title */}
         <h1 className="contact-title">Contact Us</h1>
         <p className="contact-subtitle">
-          Got a question or need help with your order? We’d love to hear from you!
+          Got a question or need help with your order? We’d love to hear from
+          you!
         </p>
 
         {/* Info Section */}
         <div className="contact-info">
           <p>
-            Call us: <strong>03010568885</strong>
+            Call us: <strong>0301 0568885</strong>
           </p>
-          <p>Office Hours: Mon - Fri | 10am - 5pm MST</p>
+          <p>Office Hours: Mon - Fri | 10am - 5pm</p>
           <p>Email us: muhammadumar.codes@gmail.com</p>
         </div>
 
@@ -80,18 +93,14 @@ const [modal, setModal]=useState(false)
           </button>
         </form>
 
-        {/* ✅ Modal / Success Message */}
-        {
-        
-        modal && (
+        {/* ✅ Success Modal */}
+        {modal && (
           <div className="success-message">
             <h2>✅ Thank you, {form.username || "User"}!</h2>
-            <p>Your message has been sent successfully. We’ll get back to you soon.</p>
-            {
-              setTimeout(() => {
-                setModal(false)
-              },3000)
-            }
+            <p>
+              Your message has been sent successfully. We’ll get back to you
+              soon.
+            </p>
             <button onClick={() => setModal(false)} className="btn-gradient">
               Close
             </button>
