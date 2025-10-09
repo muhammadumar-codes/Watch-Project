@@ -3,7 +3,7 @@ import "./Header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import { useState, useContext } from "react";
-import { DataContext } from "../../components/DataContext/Datacontext";
+import { DataContext } from "../../context/Datacontext";
 
 
 // ======= Header Component ==========

@@ -14,7 +14,7 @@ import ProductDetail from "./pages/Home/ProductDetail"
 import Cart from  "./pages/CartPage/CartPage"
 
 // Watch DataProvider
-import DataContextProvider from "./components/DataContext/Datacontext"
+import DataContextProvider from "./context/Datacontext"
 
 // Layout
 import Layout from "./Layouts/Layout";

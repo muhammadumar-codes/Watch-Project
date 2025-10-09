@@ -12,7 +12,7 @@ import HeroSection from "../../components/HeroSection/HeroSection";
 import Dropdown from "../../components/DropDown/DropDown";
 
 // DataContext from context api
-import { DataContext } from "../../components/DataContext/Datacontext";
+import { DataContext } from "../../context/Datacontext"
 
 
 

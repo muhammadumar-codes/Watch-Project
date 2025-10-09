@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import "./ProductDetail.css";
-import { DataContext } from "../DataContext/Datacontext";
+import { DataContext } from "../../context/Datacontext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 export default function ProductDetails() {
+  
   const { watches } = useContext(DataContext);
   const { id } = useParams();
   const watch = watches.find((p) => p.id === +id);
