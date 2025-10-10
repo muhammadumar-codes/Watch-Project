@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import LoginPage from "./pages/Login/Login";
 import DigitalClock from "./components/DigtalWatch/DigtalWatch";
 import ProductDetail from "./pages/Home/ProductDetail"
-import Cart from  "./pages/CartPage/CartPage"
+import CartPage from  "./pages/CartPage/CartPage"
 
 
 // Watch DataProvider
@@ -43,7 +43,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clock" element={<DigitalClock />} />
-          <Route path="/Cart" element={<Cart />} />
+          <Route path="/Cart" element={<CartPage />} />
         </Route>
       </Route>
 
