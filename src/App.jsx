@@ -13,8 +13,10 @@ import DigitalClock from "./components/DigtalWatch/DigtalWatch";
 import ProductDetail from "./pages/Home/ProductDetail"
 import Cart from  "./pages/CartPage/CartPage"
 
+
 // Watch DataProvider
 import DataContextProvider from "./context/Datacontext"
+import CartContextProvider from "./context/cartContext"
 
 // Layout
 import Layout from "./Layouts/Layout";
@@ -28,6 +30,8 @@ import Redirect from "./Roots/Redirected";
 export default function App() {
   return (
     <>
+      
+    <CartContextProvider>
     <DataContextProvider>
 
     <Routes>
@@ -52,6 +56,7 @@ export default function App() {
       <Route path="*" element={<NotFound />} />
     </Routes>
     </DataContextProvider>
+    </CartContextProvider>
     
     </>
   );

@@ -2,8 +2,14 @@ import "./Product.css";
 
 import { useNavigate } from "react-router-dom";
 
+// use context
+import {cartContext} from "../../context/cartContext"
+import { useContext } from "react"
+
 export default function Product({ watches }) {
   const navigate = useNavigate();
+const { addToCart}= useContext(cartContext)
+
 
   // handle link to detail page
 
@@ -27,12 +33,12 @@ export default function Product({ watches }) {
                 <h5 className="card-title">{item.name}</h5>
                 <p className="card-text">{item.description}</p>
                 <h6 className="price-tag">Rs, {item.price}</h6>
-                <a href="#" className="btn-gradient">
+                <a href="#" className="btn-gradient" onClick={()=>addToCart(item)}>
                   🛒 Add To Cart
                 </a>
               </div>
             </div>
-          ))
+          ))  
         ) : (
           <h3>No watches found for this category ⌚</h3>
         )}

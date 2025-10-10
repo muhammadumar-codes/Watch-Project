@@ -1,4 +1,4 @@
-import "./Home.css";
+
 import { useState } from "react";
 
 
@@ -13,10 +13,6 @@ import Dropdown from "../../components/DropDown/DropDown";
 
 // DataContext from context api
 import { DataContext } from "../../context/Datacontext"
-
-
-
-
 
 export default function Home() {
   const { watches } = useContext(DataContext);

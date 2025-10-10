@@ -1,4 +1,3 @@
-import "./NotFound.css"
 
 
 // components

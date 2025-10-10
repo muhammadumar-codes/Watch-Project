@@ -1,5 +1,5 @@
 // css
-import "./Layout.css";
+import "../styles/Layout.css"
 
 // components
 import Header from "../components/Header/Header";
