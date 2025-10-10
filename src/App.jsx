@@ -12,6 +12,7 @@ import LoginPage from "./pages/Login/Login";
 import DigitalClock from "./components/DigtalWatch/DigtalWatch";
 import ProductDetail from "./pages/Home/ProductDetail"
 import DataContextProvider from "./components/DataContext/Datacontext"
+import Cart from "./pages/cart/cart"
 
 
 
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clock" element={<DigitalClock />} />
+          <Route path="/Cart" element={<Cart />} />
         </Route>
       </Route>
 

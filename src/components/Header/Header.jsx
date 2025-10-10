@@ -1,6 +1,9 @@
 //css
 import "./Header.css";
 
+// cart page
+
+
 //NavLink
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -15,6 +18,8 @@ export default function Header() {
     localStorage.removeItem("currentUser");
     navigate("/login");
   };
+
+
   return (
     <>
       <header className="header">
@@ -39,6 +44,11 @@ export default function Header() {
         <div className="search-box-container">
           <div className="search-box">
             <input type="text" placeholder="Search..." />
+            {/* navigate  it to shoping  cart  */}
+            
+            <NavLink to={"/cart"}>
+            <img src="../src/assets/images/cart-icon.png" alt="" />
+            </NavLink>
             <Button className="button-logout" onClick={logOut}>
               Log out
             </Button>
