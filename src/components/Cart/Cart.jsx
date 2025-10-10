@@ -15,12 +15,16 @@ export default function Cart() {
   } = useContext(cartContext);
 
   return (
+   <>
     <div className="cart-page">
       {Cart.length === 0 ? (
         <p className="cart-empty-message">Your cart is empty 😔</p>
       ) : (
         <>
-          {Cart.map((item) => (
+          <h1 className="shoping-cart-message">Shoping Cart </h1>
+         <div className="shoping-cart-container">
+           {Cart.map((item) => (
+          
             <div className="cart-item" key={item.id}>
               <img src={item.image} alt={item.name} className="cart-img" />
               <div className="cart-details">
@@ -42,14 +46,19 @@ export default function Cart() {
             </div>
           ))}
 
-          <div className="cart-summary">
-            <h3>Total: Rs {totalPrice}</h3>
+         </div>
+         <div className="summery">
+           <div className="cart-summary">
+            <h3>Total: Rs,   {totalPrice}</h3>
             <button className="clear-btn" onClick={clearCart}>
               Clear Cart
             </button>
           </div>
+         </div>
         </>
       )}
     </div>
+   </>
   );
+
 }
