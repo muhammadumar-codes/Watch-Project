@@ -6,7 +6,7 @@ import { useContext } from "react";
 //css
 import "./ProductDetail.css";
 //data
-import {DataContext} from "../DataContext/Datacontext"
+import {DataContext} from "../../context/Datacontext"
 
 export default function ProductDetails() {
 const {watches}=useContext(DataContext)

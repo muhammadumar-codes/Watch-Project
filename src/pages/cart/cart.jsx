@@ -1,7 +1,11 @@
+import "../../styles/Cart.css"
+
 export default function Cart (){
     return (
         <>
-      <h1>Shoping Cart 🛒</h1>
+      <h1 className="shoping-cart-mesage">
+        Shoping  Cart 🛒
+      </h1>
         </>
     )
 }

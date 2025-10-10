@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import LoginPage from "./pages/Login/Login";
 import DigitalClock from "./components/DigtalWatch/DigtalWatch";
 import ProductDetail from "./pages/Home/ProductDetail"
-import DataContextProvider from "./components/DataContext/Datacontext"
+import DataContextProvider from "./context/Datacontext"
 import Cart from "./pages/cart/cart"
 
 

@@ -47,7 +47,7 @@ export default function Header() {
             {/* navigate  it to shoping  cart  */}
             
             <NavLink to={"/cart"}>
-            <img src="../src/assets/images/cart-icon.png" alt="" />
+            <img src="../src/assets/images/cart-icon.png" alt="" className="cart-image" />
             </NavLink>
             <Button className="button-logout" onClick={logOut}>
               Log out

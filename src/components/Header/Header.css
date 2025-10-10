@@ -13,6 +13,7 @@ body {
   background: #fdfdfd;
 }
 
+
 /* Header */
 .header {
   display: flex;
@@ -95,14 +96,14 @@ body {
 .nav-links .active::after {
   width: 100%;
 }
-.search-box >img{
-  width: 40px;
-  margin: 10px;
-}
-.search-box{
-  display: flex;
-    align-items: center;
 
+.search-box {
+  display: flex;
+   align-items: center;
+  gap: 10px;
+}
+.search-box img{
+  width:40px;
 }
 /* Search Box */
 .search-box-container {

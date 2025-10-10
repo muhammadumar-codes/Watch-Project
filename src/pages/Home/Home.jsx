@@ -8,7 +8,7 @@ import { useContext } from "react";
 import Product from "../../components/ProductCard/Product";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import Dropdown from "../../components/DropDown/DropDown";
-import { DataContext } from "../../components/DataContext/Datacontext";
+import { DataContext } from "../../context/Datacontext"
 
 export default function Home() {
   const { watches } = useContext(DataContext);
@@ -28,5 +28,6 @@ export default function Home() {
       <Dropdown setSelected={setSelected} />
       <Product watches={filterWatches} />
     </>
+    
   );
 }
