@@ -16,7 +16,7 @@ import Cart from  "./pages/CartPage/CartPage"
 
 // Watch DataProvider
 import DataContextProvider from "./context/Datacontext"
-import CartContextProvider from "./context/cartContext"
+import  CartContextProvider from "./context/cartContext"
 
 // Layout
 import Layout from "./Layouts/Layout";

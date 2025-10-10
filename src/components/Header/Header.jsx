@@ -1,20 +1,22 @@
 // 📦 Imports
-import "../../styles/Header.css"
+import "../../styles/Header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import { useState, useContext } from "react";
 import { DataContext } from "../../context/Datacontext";
-
+import { cartContext } from "../../context/CartContext"; // ✅ import CartContext
 
 // ======= Header Component ==========
 export default function Header() {
-  
   const { watches } = useContext(DataContext);
+  const { Cart } = useContext(cartContext); // ✅ Get Cart from context (live data)
   const [search, setSearch] = useState(""); // Search text
   const [filteredResults, setFilteredResults] = useState([]); // store filtered products
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("currentUser"));
-  const cartCount = JSON.parse(localStorage.getItem("cartItems"))?.length || 0;
+
+  // ✅ Get cart count live
+  const cartCount = Cart.reduce((total, item) => total + item.quantity, 0);
 
   // ======= Logout ==========
   const logOut = () => {
@@ -73,15 +75,15 @@ export default function Header() {
             />
           </form>
 
+          {/* ✅ Live Cart Badge */}
           <div className="cart-container">
             <NavLink to={"/Cart"}>
-            <img
-              src="../src/assets/images/cart-icon.png"
-              alt="Cart"
-              className="cart-icon-image"
-            />
+              <img
+                src="../src/assets/images/cart-icon.png"
+                alt="Cart"
+                className="cart-icon-image"
+              />
             </NavLink>
-
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </div>
 
@@ -91,7 +93,20 @@ export default function Header() {
         </div>
       </header>
 
-      {/* ✅ Show Search Results */}
+      {/* Optional: show filtered results (like search dropdown) */}
+      {filteredResults.length > 0 && (
+        <div className="search-results">
+          {filteredResults.map((item) => (
+            <div
+              key={item.id}
+              className="search-result-item"
+              onClick={() => navigate(`productDetail/${item.id}`)}
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }
