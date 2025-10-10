@@ -1,5 +1,5 @@
 // 📦 Imports
-import "./Header.css";
+import "../../styles/Header.css"
 import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import { useState, useContext } from "react";

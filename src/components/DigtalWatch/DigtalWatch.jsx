@@ -1,3 +1,5 @@
+import  "../../styles/DigitalWatch.css"
+
 import { useState, useEffect } from "react";
 
 export default function DigitalClock() {

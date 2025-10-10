@@ -1,6 +1,7 @@
+import "../../styles/ProductDetail.css"
+
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import "./ProductDetail.css";
 import { DataContext } from "../../context/Datacontext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 

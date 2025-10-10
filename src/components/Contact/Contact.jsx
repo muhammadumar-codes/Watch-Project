@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import "./Contact.css";
+
+import "../../styles/Contact.css"
 
 export default function Contact() {
   const [modal, setModal] = useState(false);

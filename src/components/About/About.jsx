@@ -1,7 +1,7 @@
 // Hero Section
 import Hero from "../HeroSection/HeroSection";
 // CSS
-import "./About.css";
+import  "../../styles/About.css"
 
 export default function About() {
   return (
