@@ -19,11 +19,11 @@ import DataContextProvider from "./context/Datacontext"
 import  CartContextProvider from "./context/cartContext"
 
 // Layout
-import Layout from "./Layouts/Layout";
+import Layout  from "./layout/Layout"
 
 // Auth Routes
-import Private from "./Roots/Private";
-import Redirect from "./Roots/Redirected";
+import Private from "./routes/Private";
+import Redirect from "./routes/Redirected";
 
 
 
