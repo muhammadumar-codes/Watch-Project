@@ -10,7 +10,7 @@ import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import LoginPage from "./pages/Login/Login";
 import DigitalClock from "./components/DigtalWatch/DigtalWatch";
-import ProductDetail from "./pages/Home/ProductDetail"
+import ProductCardDetail from "./pages/Home/ProductDetail"
 import CartPage from  "./pages/CartPage/CartPage"
 
 
@@ -39,7 +39,7 @@ export default function App() {
       <Route element={<Private />}>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/productDetail/:id" element={<ProductDetail />} />
+          <Route path="/productDetail/:id" element={<ProductCardDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clock" element={<DigitalClock />} />

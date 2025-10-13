@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { DataContext } from "../../context/Datacontext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-export default function ProductDetails() {
+export default function ProductCardDetail() {
   
   const { watches } = useContext(DataContext);
   const { id } = useParams();

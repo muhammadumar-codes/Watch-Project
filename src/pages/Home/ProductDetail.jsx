@@ -2,13 +2,13 @@
   
 
 // components
-import ProductDetails  from "../../components/ProductDetails/ProductDetail"
+import ProductCardDetail  from "../../components/ProductCartDetail/ProductDetail"
 
 export default function ProductDetail (){
   return (
     <>
   
-<ProductDetails/>
+<ProductCardDetail/>
     </>
   )
 }
