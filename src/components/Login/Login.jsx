@@ -65,8 +65,8 @@ export default function Login() {
   return (
     <div className="form-container">
       <div className="login-container">
-        <h2>Welcome Back 👋</h2>
-        <p className="subtitle">Login to continue to your dashboard</p>
+        <h2>Login</h2>
+        <p className="subtitle">Login to continue to your Home</p>
 
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="form-group">
