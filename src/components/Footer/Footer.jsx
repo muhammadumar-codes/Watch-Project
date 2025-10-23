@@ -26,7 +26,7 @@ export default function Footer (){
 
           <div className="footer-links">
             <h3>Quick Links</h3>
-            <ul classNameName="nav-list">
+            <ul className="nav-list">
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
