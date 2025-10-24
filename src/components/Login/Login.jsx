@@ -17,8 +17,8 @@ export default function Login() {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        // const userApiUrl = import.meta.env.VITE_USERS_API_URL 
-        const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+        const userApiUrl = import.meta.env.VITE_USERS_API_URL 
+        const response = await axios.get(`${userApiUrl}/users`);
         setUsers(response.data);
         setLoading(false);
       } catch (error) {
