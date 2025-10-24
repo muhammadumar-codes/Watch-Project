@@ -67,7 +67,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.5,
       colors: ["Blue", "Black", "Green"],
       isFeatured: false,
-      image: "../../src/assets/images/watch (3).jpg",
+      image: "/public/images/watch (1).jpg",
     },
     {
       id: 5,
