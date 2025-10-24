@@ -30,13 +30,14 @@ import Redirect from "./routes/Redirected";
 export default function App() {
   return (
     <>
-      
+      {/* it is providing the context data  to app */}
     <CartContextProvider>
     <DataContextProvider>
 
     <Routes>
       {/*  Protected Routes (User must be logged in) */}
       <Route element={<Private />}>
+      {/* it provide the layout to al user */}
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/productDetail/:id" element={<ProductCardDetail />} />

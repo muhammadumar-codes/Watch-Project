@@ -227,7 +227,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.6,
       colors: ["Black", "Green", "Silver"],
       isFeatured: true,
-      image: "../../src/assets/images/watch (7).jpg",
+      image: "../../src/assets/images/watch (8).jpg",
     },
   ];
 
