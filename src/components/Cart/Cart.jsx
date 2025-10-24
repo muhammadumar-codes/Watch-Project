@@ -17,11 +17,14 @@ export default function Cart() {
   return (
    <>
     <div className="cart-page">
+    
       {Cart.length === 0 ? (
-        <p className="cart-empty-message">Your cart is empty 😔</p>
+        <p className="cart-empty-message">Your shopping cart is currently empty.
+Explore our products and add items to proceed to checkout.</p>
       ) : (
         <>
-          <h1 className="shoping-cart-message">Shoping Cart </h1>
+          <div className="selected-cart-container">
+            <h1 className="shoping-cart-message">Shoping Cart </h1>
          <div className="shoping-cart-container">
            {Cart.map((item) => (
           
@@ -45,6 +48,7 @@ export default function Cart() {
               </div>
             </div>
           ))}
+          </div>
 
          </div>
          <div className="summery">

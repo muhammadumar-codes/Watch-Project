@@ -1,18 +1,24 @@
 .cart-page {
   padding: 40px;
-  background: #f9f9f9;
+  background: #e7e4e4;
   min-height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:'Times New Roman', Times, serif;
+  
+  
 }
+
 .shoping-cart-container{
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
+  margin: 15px;
+  
 }
 .shoping-cart-message{
   text-align: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  font-family:'Times New Roman', Times, serif;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
   margin-bottom: 10px;
   padding: 12px;
   border-radius: 5px;
@@ -30,7 +36,10 @@
   background: #fff;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  height: 28vh;
+  
 
 }
 

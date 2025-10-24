@@ -27,12 +27,7 @@ export default function Product({ watches }) {
               <p className="card-text">{item.description}</p>
               <h6 className="price-tag">Rs {item.price}</h6>
 
-              <button
-                className="btn-gradient"
-                onClick={() => addToCart(item)}
-              >
-                🛒 Add To Cart
-              </button>
+         
             </div>
           </div>
         ))

@@ -2,12 +2,23 @@ import "../../styles/ProductDetail.css"
 
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { DataContext } from "../../context/Datacontext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+
+
+// context 
+import { DataContext } from "../../context/Datacontext";
+import { cartContext } from "../../context/CartContext";
+
+
 
 export default function ProductCardDetail() {
   
+  // DataContext
   const { watches } = useContext(DataContext);
+  // cartContext
+  const {addToCart}=useContext(cartContext)
+
+  // taking the unique id of each users!
   const { id } = useParams();
   const watch = watches.find((p) => p.id === +id);
 
@@ -57,6 +68,12 @@ export default function ProductCardDetail() {
               </p>
 
               <h6 className="price-tag-detail">Rs. {watch.price}</h6>
+                <button
+                className="btn-gradient"
+                onClick={() => addToCart(watch)}
+              >
+                🛒 Add To Cart
+              </button>
             </div>
           </div>
         ) : (
