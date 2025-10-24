@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
+// css
 import "../../styles/Contact.css"
+//Button
+import Button from "../Button/Button";
 
 export default function Contact() {
   const [modal, setModal] = useState(false);
@@ -104,9 +107,12 @@ export default function Contact() {
               Your message has been sent successfully. We’ll get back to you
               soon.
             </p>
-            <button onClick={() => setModal(false)} className="btn-gradient">
-              Close
-            </button>
+
+
+<Button onClick={()=>setModal(false)} className="btn-gradient">
+  Close
+</Button>
+
           </div>
         )}
       </div>

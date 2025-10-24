@@ -19,7 +19,7 @@ export default function Cart() {
     <div className="cart-page">
     
       {Cart.length === 0 ? (
-        <p className="cart-empty-message">Your shopping cart is currently empty.
+        <p className="cart-empty-message"> "Your shopping cart is currently empty"<br />
 Explore our products and add items to proceed to checkout.</p>
       ) : (
         <>
