@@ -18,7 +18,7 @@ export default function Login() {
     async function fetchUsers() {
       try {
         const userApiUrl = import.meta.env.VITE_USERS_API_URL 
-        const response = await axios.get(`${userApiUrl}/users`);
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users");
         setUsers(response.data);
         setLoading(false);
       } catch (error) {
