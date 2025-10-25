@@ -79,7 +79,7 @@ export default function Header() {
           <div className="cart-container">
             <NavLink to={"/Cart"}>
               <img
-                src="/public/images/cart-icon.png"
+                src="/public/assets/images/cart-icon.png"
                 alt="Cart"
                 className="cart-icon-image"
               />
