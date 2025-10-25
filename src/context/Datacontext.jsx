@@ -67,7 +67,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.5,
       colors: ["Blue", "Black", "Green"],
       isFeatured: false,
-      image: "/public/images/watch (1).jpg",
+      image: "/public/assets/images/watch (1).jpg",
     },
     {
       id: 5,
@@ -81,7 +81,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.4,
       colors: ["Black", "Red", "Green"],
       isFeatured: true,
-      image: "/public/images/watch (3).jpg",
+      image: "/public/assets/images/watch (3).jpg",
     },
     {
       id: 6,
@@ -127,7 +127,7 @@ export default function DataContextProvider({ children }) {
       colors: ["Black", "Brown"],
       isFeatured: false,
       image:
-        "/public/images/watch (4).jpg",
+        "/public/assets/images/watch (4).jpg",
     },
     {
       id: 9,
@@ -141,7 +141,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.8,
       colors: ["Rose Gold", "Silver"],
       isFeatured: true,
-      image: "/public/images/watch (5).jpg",
+      image: "/public/assets/images/watch (5).jpg",
     },
     {
       id: 10,
@@ -155,7 +155,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.5,
       colors: ["Silver", "Black", "Blue"],
       isFeatured: false,
-      image:"./public/assets/images/watch (6).jpg",
+      image:"/public/assets/images/watch (6).jpg",
     },
     {
       id: 11,
@@ -169,7 +169,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.6,
       colors: ["Black", "Blue"],
       isFeatured: false,
-      image: "./public/assets/images/watch (8).jpg",
+      image: "/public/assets/images/watch (8).jpg",
     },
     {
       id: 12,
@@ -198,7 +198,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.7,
       colors: ["Black", "Brown"],
       isFeatured: false,
-      image: "./public/assets/images/watch (9).jpg",
+      image: "/public/assets/images/watch (9).jpg",
     },
     {
       id: 14,
@@ -213,7 +213,7 @@ export default function DataContextProvider({ children }) {
       colors: ["Blue", "Brown", "Rose Gold"],
       isFeatured: false,
       image:
-        "/public/images/watch (4).jpg",
+        "/public/assets/images/watch (4).jpg",
     },
     {
       id: 15,
@@ -227,7 +227,7 @@ export default function DataContextProvider({ children }) {
       rating: 4.6,
       colors: ["Black", "Green", "Silver"],
       isFeatured: true,
-      image: "./public/assets/images/watch (8).jpg",
+      image: "/public/assets/images/watch (8).jpg",
     },
   ];
 
